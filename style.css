@@ -17,79 +17,117 @@ body {
     align-items: center;
     justify-content: center;
     background-color: black;
-    text-align: center;
-    padding: 20px; /* Espacio extra para móviles */
+    text-align: center; /* Para centrar el texto en pantallas pequeñas */
 }
 
-/* Título */
-h1 {
-    font-size: 4rem; /* Ajusta el tamaño del título */
-    font-weight: 800;
-    color: #fbff00;
-    margin-bottom: 10px;
-    text-align: center;
+.greetings {
+    font-size: 6rem;
+    font-weight: 600;
+    word-wrap: break-word; /* Evita que las palabras se corten */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+/* Animación de resplandor */
+@keyframes glow {
+    0%, 100% {
+        color: #fff;
+        text-shadow: 0 0 10px #fbff00, 0 0 40px #fbff00, 0 0 100px #fbff00;
+    }
+    10%, 90% {
+        color: #696565;
+        text-shadow: none;
+    }
+}
+
+.greetings > span:nth-child(2) {
+    animation-delay: .2s;
+}
+.greetings > span:nth-child(3) {
+    animation-delay: .4s;
+}
+.greetings > span:nth-child(4) {
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5) {
+    animation-delay: .8s;
 }
 
 /* Descripción debajo del título */
-p {
-    font-size: 1.2rem;
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     color: #fbff00;
-    margin-bottom: 20px;
-    line-height: 1.5; /* Mejora la legibilidad */
 }
 
 /* Estilo para el botón */
-button {
+.button button {
     background-color: yellow;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 8px 18px;
+    font-size: 6px;
     cursor: pointer;
+    position: relative;
     border-radius: 20px;
     transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+.button button a {
+    text-decoration: none;
+    color: inherit; /* El enlace hereda el color del botón */
+}
+
+.button button:hover {
     background-color: orange;
     box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
 }
 
 /* Media Queries para pantallas pequeñas */
-@media screen and (max-width: 574px) {
+@media screen and (max-width: 660px) {
     body {
-        padding: 10px;
+        padding: 8px; /* Asegura espacio alrededor en pantallas pequeñas */
+    }
+    
+    .greetings {
+        font-size: 3rem; /* Reduce el tamaño del texto para pantallas pequeñas */
+        font-weight: 500;
     }
 
-    h1 {
-        font-size: 2.5rem; /* Reduce el tamaño del título para pantallas pequeñas */
+    .description {
+        font-size: 1rem; /* Ajuste del tamaño de la descripción */
         margin-bottom: 8px;
     }
 
-    p {
-        font-size: 1rem;
-        margin-bottom: 12px;
+    .button button {
+        padding: 8px 14px; /* Ajusta el relleno del botón para que se vea bien */
+        font-size: 1rem; /* Ajusta el tamaño del texto del botón */
     }
 
-    button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+    .button button a {
+        font-size: 0.9rem; /* Ajusta el tamaño del enlace */
     }
 }
 
 /* Ajustes adicionales para pantallas aún más pequeñas (móviles pequeños) */
 @media screen and (max-width: 400px) {
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 6px;
+    .greetings {
+        font-size: 2.0rem; /* Reduce más el tamaño del texto para móviles pequeños */
+        font-weight: 600;
     }
 
-    p {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
+    .description {
+        font-size: 0.7rem; /* Ajuste adicional para la descripción */
     }
 
-    button {
+    .button button {
         padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .button button a {
         font-size: 0.8rem;
     }
 }
