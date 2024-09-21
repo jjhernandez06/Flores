@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
 
+/* Estilo general */
 * {
     font-family: 'Poppins', cursive;
     margin: 0;
@@ -16,19 +17,21 @@ body {
     align-items: center;
     justify-content: center;
     background-color: black;
-    text-align: center; /* Centrar el texto en pantallas pequeñas */
-    padding: 10px; /* Añadir algo de padding para mejorar el diseño en pantallas pequeñas */
+    text-align: center; /* Para centrar el texto en pantallas pequeñas */
 }
 
 .greetings {
     font-size: 6rem;
     font-weight: 900;
+    word-wrap: break-word; /* Evita que las palabras se corten */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
 .greetings > span {
     animation: glow 2.5s ease-in-out infinite;
 }
 
+/* Animación de resplandor */
 @keyframes glow {
     0%, 100% {
         color: #fff;
@@ -43,84 +46,21 @@ body {
 .greetings > span:nth-child(2) {
     animation-delay: .2s;
 }
-
 .greetings > span:nth-child(3) {
     animation-delay: .4s;
 }
-
 .greetings > span:nth-child(4) {
     animation-delay: .6s;
 }
-
 .greetings > span:nth-child(5) {
     animation-delay: .8s;
 }
 
+/* Descripción debajo del título */
 .description {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #fbff00;
-}
-
-.button a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #111;
-}
-
-/* Media Queries para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    .greetings {
-        font-size: 4rem; /* Ajuste para tablets y pantallas medianas */
-        font-weight: 600;
-    }
-
-    .description {
-        font-size: 1.2rem; /* Tamaño de texto ligeramente más pequeño */
-    }
-
-    .button a {
-        font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width: 574px) {
-    .greetings {
-        font-size: 3rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
-        font-weight: 400;
-    }
-
-    .description {
-        font-size: 1rem;
-    }
-
-    .button a {
-        font-size: 0.7rem;
-    }
-
-    .button button {
-        font-size: 14px; /* Ajustar el tamaño del botón en pantallas pequeñas */
-        padding: 8px 14px;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .greetings {
-        font-size: 2.5rem; /* Ajustar para móviles más pequeños */
-    }
-
-    .description {
-        font-size: 0.9rem;
-    }
-
-    .button a {
-        font-size: 0.6rem;
-    }
-
-    .button button {
-        font-size: 12px;
-        padding: 6px 12px;
-    }
 }
 
 /* Estilo para el botón */
@@ -137,13 +77,58 @@ body {
 
 .button button a {
     text-decoration: none;
-    color: inherit;
+    color: inherit; /* El enlace hereda el color del botón */
 }
 
-/* Efecto de resplandor al pasar el cursor sobre el botón */
 .button button:hover {
     background-color: orange;
     box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
 }
 
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 574px) {
+    body {
+        padding: 10px; /* Asegura espacio alrededor en pantallas pequeñas */
+    }
+    
+    .greetings {
+        font-size: 3rem; /* Reduce el tamaño del texto para pantallas pequeñas */
+        font-weight: 700;
+    }
+
+    .description {
+        font-size: 1rem; /* Ajuste del tamaño de la descripción */
+        margin-bottom: 10px;
+    }
+
+    .button button {
+        padding: 8px 15px; /* Ajusta el relleno del botón para que se vea bien */
+        font-size: 1rem; /* Ajusta el tamaño del texto del botón */
+    }
+
+    .button button a {
+        font-size: 0.9rem; /* Ajusta el tamaño del enlace */
+    }
+}
+
+/* Ajustes adicionales para pantallas aún más pequeñas (móviles pequeños) */
+@media screen and (max-width: 400px) {
+    .greetings {
+        font-size: 2.5rem; /* Reduce más el tamaño del texto para móviles pequeños */
+        font-weight: 600;
+    }
+
+    .description {
+        font-size: 0.9rem; /* Ajuste adicional para la descripción */
+    }
+
+    .button button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .button button a {
+        font-size: 0.8rem;
+    }
+}
   
