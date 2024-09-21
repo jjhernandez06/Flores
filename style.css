@@ -17,117 +17,79 @@ body {
     align-items: center;
     justify-content: center;
     background-color: black;
-    text-align: center; /* Para centrar el texto en pantallas pequeñas */
+    text-align: center;
+    padding: 20px; /* Espacio extra para móviles */
 }
 
-.greetings {
-    font-size: 6rem;
-    font-weight: 800;
-    word-wrap: break-word; /* Evita que las palabras se corten */
-    text-align: center; /* Asegura que el texto esté centrado */
-}
-
-.greetings > span {
-    animation: glow 2.5s ease-in-out infinite;
-}
-
-
+/* Título */
 h1 {
-    font-size: 4rem; /* Ajusta el tamaño aquí según lo que necesites */
-    font-weight: 800; /* Ajusta el peso de la fuente si es necesario */
-    color: #fbff00; /* Cambia el color si es necesario */
-    text-align: center; /* Para centrar el texto */
-}
-
-p {
-    font-size: 1.5rem; /* Ajusta el tamaño aquí según lo que prefieras */
-    margin-bottom: 16px; /* Ajusta el espacio entre el párrafo y otros elementos */
-    color: #fbff00; /* Cambia el color si es necesario */
-    text-align: center; /* Asegura que el texto esté centrado */
-}
-
-/* Animación de resplandor */
-@keyframes glow {
-    0%, 100% {
-        color: #fff;
-        text-shadow: 0 0 12px #fbff00, 0 0 50px #fbff00, 0 0 100px #fbff00;
-    }
-    10%, 90% {
-        color: #696565;
-        text-shadow: none;
-    }
-}
-
-.greetings > span:nth-child(2) {
-    animation-delay: .2s;
-}
-.greetings > span:nth-child(3) {
-    animation-delay: .4s;
-}
-.greetings > span:nth-child(4) {
-    animation-delay: .6s;
-}
-.greetings > span:nth-child(5) {
-    animation-delay: .8s;
+    font-size: 4rem; /* Ajusta el tamaño del título */
+    font-weight: 800;
+    color: #fbff00;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Descripción debajo del título */
-.description {
-    font-size: 1.5rem;
-    margin-bottom: 16px;
+p {
+    font-size: 1.2rem;
     color: #fbff00;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Mejora la legibilidad */
 }
 
 /* Estilo para el botón */
-.button button {
+button {
     background-color: yellow;
     border: none;
-    padding: 8px 18px;
-    font-size: 6px;
+    padding: 10px 20px;
+    font-size: 1rem;
     cursor: pointer;
-    position: relative;
     border-radius: 20px;
     transition: background-color 0.3s ease-in-out;
 }
 
-.button button a {
-    text-decoration: none;
-    color: inherit; /* El enlace hereda el color del botón */
-}
-
-.button button:hover {
+button:hover {
     background-color: orange;
     box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
 }
 
+/* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 574px) {
+    body {
+        padding: 10px;
+    }
+
     h1 {
-        font-size: 2.5rem; /* Ajusta el tamaño del texto del título en pantallas pequeñas */
+        font-size: 2.5rem; /* Reduce el tamaño del título para pantallas pequeñas */
+        margin-bottom: 8px;
     }
 
     p {
-        font-size: 1rem; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }
 
 /* Ajustes adicionales para pantallas aún más pequeñas (móviles pequeños) */
 @media screen and (max-width: 400px) {
-    .greetings {
-        font-size: 2.5rem; /* Reduce más el tamaño del texto para móviles pequeños */
-        font-weight: 600;
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 6px;
     }
 
-    .description {
-        font-size: 0.9rem; /* Ajuste adicional para la descripción */
-    }
-
-    .button button {
-        padding: 6px 12px;
+    p {
         font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
-    .button button a {
+    button {
+        padding: 6px 12px;
         font-size: 0.8rem;
     }
 }
-  
