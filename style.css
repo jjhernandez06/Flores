@@ -72,7 +72,7 @@ body {
 @media screen and (max-width: 768px) {
     .greetings {
         font-size: 4rem; /* Ajuste para tablets y pantallas medianas */
-        font-weight: 700;
+        font-weight: 600;
     }
 
     .description {
@@ -87,7 +87,7 @@ body {
 @media screen and (max-width: 574px) {
     .greetings {
         font-size: 3rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .description {
@@ -100,11 +100,11 @@ body {
 
     .button button {
         font-size: 14px; /* Ajustar el tamaño del botón en pantallas pequeñas */
-        padding: 8px 16px;
+        padding: 8px 14px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 350px) {
     .greetings {
         font-size: 2.5rem; /* Ajustar para móviles más pequeños */
     }
