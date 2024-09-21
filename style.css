@@ -88,12 +88,12 @@ body {
 /* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 660px) {
     body {
-        padding: 8px; /* Asegura espacio alrededor en pantallas pequeñas */
+        padding: 10px; /* Asegura espacio alrededor en pantallas pequeñas */
     }
     
     .greetings {
         font-size: 3rem; /* Reduce el tamaño del texto para pantallas pequeñas */
-        font-weight: 500;
+        font-weight: 400;
     }
 
     .description {
@@ -111,23 +111,3 @@ body {
     }
 }
 
-/* Ajustes adicionales para pantallas aún más pequeñas (móviles pequeños) */
-@media screen and (max-width: 400px) {
-    .greetings {
-        font-size: 2.0rem; /* Reduce más el tamaño del texto para móviles pequeños */
-        font-weight: 600;
-    }
-
-    .description {
-        font-size: 0.7rem; /* Ajuste adicional para la descripción */
-    }
-
-    .button button {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-
-    .button button a {
-        font-size: 0.8rem;
-    }
-}
