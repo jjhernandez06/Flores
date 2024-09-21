@@ -22,13 +22,28 @@ body {
 
 .greetings {
     font-size: 6rem;
-    font-weight: 900;
+    font-weight: 800;
     word-wrap: break-word; /* Evita que las palabras se corten */
     text-align: center; /* Asegura que el texto esté centrado */
 }
 
 .greetings > span {
     animation: glow 2.5s ease-in-out infinite;
+}
+
+
+h1 {
+    font-size: 4rem; /* Ajusta el tamaño aquí según lo que necesites */
+    font-weight: 800; /* Ajusta el peso de la fuente si es necesario */
+    color: #fbff00; /* Cambia el color si es necesario */
+    text-align: center; /* Para centrar el texto */
+}
+
+p {
+    font-size: 1.5rem; /* Ajusta el tamaño aquí según lo que prefieras */
+    margin-bottom: 16px; /* Ajusta el espacio entre el párrafo y otros elementos */
+    color: #fbff00; /* Cambia el color si es necesario */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
 /* Animación de resplandor */
@@ -59,7 +74,7 @@ body {
 /* Descripción debajo del título */
 .description {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     color: #fbff00;
 }
 
@@ -67,8 +82,8 @@ body {
 .button button {
     background-color: yellow;
     border: none;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 8px 18px;
+    font-size: 6px;
     cursor: pointer;
     position: relative;
     border-radius: 20px;
@@ -85,29 +100,13 @@ body {
     box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
 }
 
-/* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 574px) {
-    body {
-        padding: 8px; /* Asegura espacio alrededor en pantallas pequeñas */
-    }
-    
-    .greetings {
-        font-size: 3rem; /* Reduce el tamaño del texto para pantallas pequeñas */
-        font-weight: 500;
+    h1 {
+        font-size: 2.5rem; /* Ajusta el tamaño del texto del título en pantallas pequeñas */
     }
 
-    .description {
-        font-size: 1rem; /* Ajuste del tamaño de la descripción */
-        margin-bottom: 8px;
-    }
-
-    .button button {
-        padding: 8px 15px; /* Ajusta el relleno del botón para que se vea bien */
-        font-size: 1rem; /* Ajusta el tamaño del texto del botón */
-    }
-
-    .button button a {
-        font-size: 0.9rem; /* Ajusta el tamaño del enlace */
+    p {
+        font-size: 1rem; /* Ajusta el tamaño del párrafo en pantallas pequeñas */
     }
 }
 
