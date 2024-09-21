@@ -88,17 +88,17 @@ body {
 /* Media Queries para pantallas pequeñas */
 @media screen and (max-width: 574px) {
     body {
-        padding: 10px; /* Asegura espacio alrededor en pantallas pequeñas */
+        padding: 8px; /* Asegura espacio alrededor en pantallas pequeñas */
     }
     
     .greetings {
         font-size: 3rem; /* Reduce el tamaño del texto para pantallas pequeñas */
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .description {
         font-size: 1rem; /* Ajuste del tamaño de la descripción */
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .button button {
